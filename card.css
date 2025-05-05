@@ -1,134 +1,200 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
   max-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow-x: hidden;
 }
-
 .card-holder {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1vw;
+  flex-direction: column;
+  align-items: center;
   width: 95%;
-  height: fit-content;
-  border: purple solid 0.2vw;
+  margin: 5vw auto;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  border: purple 0.5vw solid;
 }
-
 .card {
-  height: 42.5vw;
-  width: 30vw;
-  border: purple solid 0.5vw;
+  width: 80%;
+  height: fit-content;
+  margin: 0 auto;
   position: relative;
-}
-
-.profile-photo {
-  position: absolute;
-  width: 39%;
-  height: auto;
-  top: 24%;
-  left: 30%;
-  z-index: 3;
-  border-radius: 50%;
-}
-
-.details {
-  position: absolute;
-  width: 100%;
-  height: 47.5%;
-  top: 52.5%;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  border: purple 1vw solid;
 }
-
-.title {
+.lower-ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: fit-content;
-  width: fit-content;
-  font-size: 1.33vw;
-  color: #0056d2;
-  font-weight: 600;
-  font-family: "Roboto", sans-serif;
-  margin: 0;
 }
-
-.content {
-  height: 60%;
-  width: 70%;
+.upper-ellipse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 87%;
+  height: fit-content;
+  z-index: 2;
+}
+.MSUB-logo {
+  position: absolute;
+  top: 2.5vw;
+  width: 15vw;
+  height: 15vw;
+  z-index: 3;
+}
+.estd {
+  position: absolute;
+  top: 18.5vw;
+  width: 10vw;
+  height: auto;
+  z-index: 3;
+}
+.accredit {
+  position: absolute;
+  top: 21.5vw;
+  width: 23vw;
+  height: auto;
+  z-index: 3;
+}
+.foc {
+  position: absolute;
+  top: 25vw;
+  width: 25vw;
+  height: auto;
+  z-index: 3;
+}
+.profile-photo {
+  box-sizing: content-box;
+  position: absolute;
+  top: 32.5vw;
+  width: 31vw;
+  height: auto;
+  z-index: 3;
+  border-radius: 50%;
+  border: rgb(128, 170, 233) solid 1.5vw;
+}
+.title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 3.5vw;
+  color: #0056d2;
+  margin-top: 70vw;
+}
+.contents {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 0.75vw;
+  align-items: center;
+  width: 60%;
+  gap: 2.5vw;
+  margin-top: 3vw;
 }
-
-.detail {
+.content {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
-
 .key,
 .value {
-  width: 50%;
+  width: 40%;
   display: flex;
+  flex-direction: row;
   justify-content: start;
-  margin: 0;
-  font-size: 1vw;
   font-family: "Roboto", sans-serif;
+  font-size: 2.5vw;
+}
+.value {
+  width: 60%;
+}
+.qr-code {
+  margin-top: 3vw;
+  width: 15vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5vw;
+}
+.qr-code img {
+  width: 15vw;
+  height: fit-content;
+}
+.status-text {
+  margin: 10vw 0;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 5vw;
 }
 
-.qr {
-  width: 5vw;
-  height: 5vw;
-}
-
-.qr img {
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 1200px) {
+@media (min-width: 1000px) {
   .card-holder {
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    padding: 5vw;
-  }
-  .details {
+    flex-direction: row;
+    margin: 2vw auto;
+    padding: 2vw;
+    border: purple 0.25vw solid;
+    justify-content: start;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 150vw;
   }
   .card {
-    width: 75vw;
-    min-height: 112vw;
-    height: fit-content;
+    width: 50%;
+    margin: 0;
+    border: purple 0.5vw solid;
+  }
+  .MSUB-logo {
+    width: 7.5vw;
+    height: 7.5vw;
+  }
+  .estd {
+    top: 10.5vw;
+    width: 5vw;
+  }
+  .accredit {
+    top: 12.5vw;
+    width: 12.5vw;
+  }
+  .foc {
+    top: 14vw;
+    width: 15vw;
+  }
+  .profile-photo {
+    top: 17vw;
+    width: 20vw;
+    border: rgb(128, 170, 233) solid 0.75vw;
   }
   .title {
-    font-size: 5vw;
+    font-size: 2vw;
+    margin-top: 40vw;
+  }
+  .contents {
+    gap: 1vw;
+    margin-top: 1.5vw;
   }
   .key,
   .value {
+    font-size: 1.25vw;
+  }
+  .qr-code {
+    margin-top: 1.5vw;
+    width: 7.5vw;
+    margin-bottom: 1.5vw;
+  }
+  .qr-code img {
+    width: 7.5vw;
+  }
+  .status-text {
+    position: absolute;
     font-size: 2.5vw;
-  }
-  .content {
-    margin-top: 5vw;
-    gap: 2vw;
-  }
-  .qr {
-    margin: 5vw 0;
+    top: 41.5%;
+    left: 65%;
   }
 }
