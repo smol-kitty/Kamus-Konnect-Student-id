@@ -6,9 +6,11 @@
 body {
   width: 100vw;
   max-width: 100vw;
-  height: 100vh;
-  max-height: 100vh;
+  height: fit-content;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .card-holder {
   display: flex;
@@ -127,7 +129,7 @@ body {
 }
 .qr-code img {
   width: 15vw;
-  height: fit-content;
+  height: 15vw;
 }
 .status-text {
   margin: 10vw 0;
@@ -136,65 +138,98 @@ body {
   font-size: 5vw;
 }
 
+@media (min-width: 700px) {
+  .card-holder {
+    margin: 2.5vw auto;
+    padding: 0;
+    padding-bottom: 2.5vw;
+  }
+  .status-text {
+    margin: 2.5vw;
+  }
+  .profile-photo {
+    top: 30vw;
+  }
+  .title {
+    margin-top: 65vw;
+  }
+  .contents {
+    margin-top: 2vw;
+  }
+  .qr-code {
+    margin-top: 2vw;
+  }
+}
+
 @media (min-width: 1000px) {
+  body {
+    height: 99vh;
+    max-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+  }
   .card-holder {
     flex-direction: row;
-    margin: 2vw auto;
-    padding: 2vw;
+    margin: 1.25vw auto;
+    padding: 0.5vw;
     border: purple 0.25vw solid;
     justify-content: start;
     position: relative;
   }
   .card {
-    width: 50%;
+    width: 30%;
     margin: 0;
+    margin-left: 1%;
     border: purple 0.5vw solid;
   }
   .MSUB-logo {
-    width: 7.5vw;
-    height: 7.5vw;
+    width: 5vw;
+    height: 5vw;
+    top: 1vw;
   }
   .estd {
-    top: 10.5vw;
-    width: 5vw;
+    top: 6vw;
+    width: 3.5vw;
   }
   .accredit {
-    top: 12.5vw;
-    width: 12.5vw;
+    top: 7vw;
+    width: 8vw;
   }
   .foc {
-    top: 14vw;
-    width: 15vw;
+    top: 7.75vw;
+    width: 10vw;
   }
   .profile-photo {
-    top: 17vw;
-    width: 20vw;
-    border: rgb(128, 170, 233) solid 0.75vw;
+    top: 10vw;
+    width: 10vw;
+    border: rgb(128, 170, 233) solid 0.5vw;
   }
   .title {
-    font-size: 2vw;
-    margin-top: 40vw;
+    font-size: 1.5vw;
+    margin-top: 21.5vw;
   }
   .contents {
-    gap: 1vw;
-    margin-top: 1.5vw;
+    gap: 0.5vw;
+    margin-top: 1vw;
+    width: 70%;
   }
   .key,
   .value {
-    font-size: 1.25vw;
+    font-size: 1vw;
   }
   .qr-code {
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     width: 7.5vw;
-    margin-bottom: 1.5vw;
+    margin-bottom: 0.5vw;
   }
   .qr-code img {
-    width: 7.5vw;
+    width: 5vw;
+    height: 5vw;
   }
   .status-text {
     position: absolute;
     font-size: 2.5vw;
-    top: 41.5%;
-    left: 65%;
+    top: 30%;
+    left: 55%;
   }
 }
